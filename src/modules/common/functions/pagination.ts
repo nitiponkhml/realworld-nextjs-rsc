@@ -1,8 +1,7 @@
 export const calcTotalPageNumber = (totalItemsCount: number, itemsPerPage: number) => {
   const quotient = Math.floor(totalItemsCount / itemsPerPage);
-  const remainder = totalItemsCount % itemsPerPage;
 
-  return remainder === 0 ? quotient : quotient + 1;
+  return quotient;
 };
 
 export const calcOffsetLimitFromPageNumber = (pageNumber: number, articlesPerPage: number) => {
