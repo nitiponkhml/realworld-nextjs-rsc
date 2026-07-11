@@ -1,5 +1,5 @@
 export const calcTotalPageNumber = (totalItemsCount: number, itemsPerPage: number) => {
-  const quotient = Math.floor(totalItemsCount / itemsPerPage);
+  const quotient = Math.ceil(totalItemsCount / itemsPerPage);
 
   return quotient;
 };
