@@ -5,7 +5,7 @@ export const showEditProfileSettingsButton = (profileUsername: string, currentUs
     return false;
   }
 
-  return profileUsername === currentUser.username;
+  return profileUsername !== currentUser.username;
 };
 
 export const showFollowButton = (profileUsername: string, currentUser: User | undefined) => {
