@@ -9,5 +9,5 @@ export const showEditProfileSettingsButton = (profileUsername: string, currentUs
 };
 
 export const showFollowButton = (profileUsername: string, currentUser: User | undefined) => {
-  return profileUsername !== currentUser?.username;
+  return profileUsername === currentUser?.username;
 };
