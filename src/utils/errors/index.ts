@@ -1,6 +1,6 @@
 export class ExhaustiveError extends Error {
   static {
-    this.prototype.name = "ExhaustiveError";
+    this.prototype.name = "ExhaustError";
   }
 
   constructor(value: never, message = `Unsupported type: ${value}`) {
