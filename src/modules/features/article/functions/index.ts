@@ -8,3 +8,23 @@ export const convertMarkdownToHtml = async (markdown: string) => {
 
   return processed.toString();
 };
+
+type CurrentUser = { username: string } | null | undefined;
+
+export const showFollowButton = (authorUsername: string, currentUser?: CurrentUser) => {
+  if (!currentUser) return true;
+
+  return currentUser.username !== authorUsername;
+};
+
+export const showEditArticleButton = (authorUsername: string, currentUser?: CurrentUser) => {
+  if (!currentUser) return false;
+
+  return currentUser.username === authorUsername;
+};
+
+export const showDeleteArticleButton = (authorUsername: string, currentUser?: CurrentUser) => {
+  if (!currentUser) return false;
+
+  return currentUser.username === authorUsername;
+};
